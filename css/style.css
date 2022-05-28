@@ -8,6 +8,21 @@ body {
 	object-fit: cover;
 }
 
+.game-counter-section {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.game-counter {
+	background: #fff;
+	padding: .3rem 1rem;
+	margin-bottom: .2rem;
+}
+
 h1 {
 	background: #fff;
 	color: #000;
@@ -16,7 +31,6 @@ h1 {
 	margin: 4rem auto;
 	padding: 1rem;
 	text-align: center;
-	color: black;
 	width: 70%;
 }
 

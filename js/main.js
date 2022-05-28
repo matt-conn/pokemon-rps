@@ -1,4 +1,4 @@
-document.querySelector('#picaku').addEventListener('click', makeReq)
+document.querySelector('#pikachu').addEventListener('click', makeReq)
 document.querySelector('#geodude').addEventListener('click', makeReq)
 document.querySelector('#squirtle').addEventListener('click', makeReq)
 
@@ -8,5 +8,6 @@ async function makeReq(e){
     const data = await res.json()
 
     console.log(data);
-    document.querySelector("#message").textContent = data.message;
+    document.querySelector("#game-throws").textContent = data.throwMessage;
+    document.querySelector("#win-or-lose").textContent = data.winOrLoseMessage;
 }

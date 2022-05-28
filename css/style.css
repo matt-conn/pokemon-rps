@@ -1,3 +1,42 @@
-h1{
-  color: red;
+body {
+	text-align: center;
+}
+
+h1 {
+	background: #fff;
+	color: #000;
+	display: inline-block;
+	font-size: 3rem;
+	margin: 45px 0;
+	padding: 15px;
+}
+
+h2 {
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 15px;
+}
+
+body {
+	background-color: black;
+	background: url(https://images.unsplash.com/photo-1613771404721-1f92d799e49f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469);
+	background-size: cover;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.img-wrapper {
+	justify-content: center;
+}
+
+.message-wrapper {
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrapper img {
+	width: 15%;
+	margin: 0 15px;
 }

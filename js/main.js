@@ -6,25 +6,28 @@ document
     .addEventListener("click", clearLocalStorageHistory)
 const gameCounter = document.querySelector(".game-counter")
 
-// runs at start to render game counter data to the screen
 renderGameCounter()
 
 async function makeReq(e) {
-    // check if there is local storage for the game, if not create it
     checkForGameCounter()
 
     const userPick = e.target.id
     const res = await fetch(`/api?pokemon=${userPick}`)
     const data = await res.json()
-
     console.log(data)
-
-    // get gamesWon and gamesPlayed from local storage
-    let gamesWon = JSON.parse(localStorage.getItem("gamesWon"))
-    let gamesPlayed = JSON.parse(localStorage.getItem("gamesPlayed"))
 
     document.querySelector("#game-throws").textContent = data.throwMessage
     document.querySelector("#win-or-lose").textContent = data.winOrLoseMessage
+
+    retrieveAndUpdateLocalStorage()
+    renderGameCounter()
+}
+
+// retrieve and update local storage
+function retrieveAndUpdateLocalStorage() {
+    // get gamesWon and gamesPlayed from local storage
+    let gamesWon = JSON.parse(localStorage.getItem("gamesWon"))
+    let gamesPlayed = JSON.parse(localStorage.getItem("gamesPlayed"))
 
     // checks if a game was played by seeing if win-or-lose h2 has content, if it does we add 1 to gamesPlayed variable and then put that value into local storage
     if (document.querySelector("#win-or-lose").textContent) {
@@ -42,9 +45,6 @@ async function makeReq(e) {
         gamesWon++
         gamesWon = localStorage.setItem("gamesWon", JSON.stringify(gamesWon))
     }
-
-    // renders the new gamesPlayed and gamesWon values to the screen
-    renderGameCounter()
 }
 
 // check if there is a game counter in local storage, if not it creates it and sets it to 0

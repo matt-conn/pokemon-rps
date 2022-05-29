@@ -2,15 +2,45 @@
 	box-sizing: border-box;
 }
 
+/*******************************************
+/* BOX SHADOWS, courtesy of Josh Comeau
+/* https://www.joshwcomeau.com/shadow-palette/
+/*******************************************/
+:root {
+	--shadow-color: 359deg 100% 8%;
+	--shadow-elevation-low:
+	  0px 0.3px 0.4px hsl(var(--shadow-color) / 0.25),
+	  0px 0.7px 0.9px -0.7px hsl(var(--shadow-color) / 0.37),
+	  0px 1.6px 2.1px -1.4px hsl(var(--shadow-color) / 0.5);
+	--shadow-elevation-medium:
+	  0px 0.3px 0.4px hsl(var(--shadow-color) / 0.27),
+	  0px 1.5px 1.9px -0.5px hsl(var(--shadow-color) / 0.36),
+	  0px 3.5px 4.5px -1px hsl(var(--shadow-color) / 0.46),
+	  -0.1px 7.9px 10.1px -1.4px hsl(var(--shadow-color) / 0.55);
+	--shadow-elevation-high:
+	  0px 0.3px 0.4px hsl(var(--shadow-color) / 0.25),
+	  0px 3.3px 4.2px -0.2px hsl(var(--shadow-color) / 0.29),
+	  -0.1px 6.1px 7.8px -0.4px hsl(var(--shadow-color) / 0.34),
+	  -0.1px 9.5px 12.2px -0.6px hsl(var(--shadow-color) / 0.38),
+	  -0.2px 14.2px 18.2px -0.8px hsl(var(--shadow-color) / 0.42),
+	  -0.3px 21px 26.9px -1px hsl(var(--shadow-color) / 0.47),
+	  -0.4px 30.7px 39.4px -1.2px hsl(var(--shadow-color) / 0.51),
+	  -0.6px 44.1px 56.6px -1.4px hsl(var(--shadow-color) / 0.56);
+}
+
+/*******************************************
+/* STYLES
+/*******************************************/
 body {
 	background-color: black;
 	background: url(https://images.unsplash.com/photo-1613771404721-1f92d799e49f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469);
 	object-fit: cover;
 }
 
-/*******************************************
-/* STYLES
-/*******************************************/
+img, h1, .game-counter, .message-wrapper {
+	box-shadow: var(--shadow-elevation-medium);
+}
+
 h1 {
 	background: #fff;
 	color: #000;
@@ -80,7 +110,7 @@ h2 {
 	background: #fff;
 	font-size: 1.15rem;
 	padding: .45rem 1rem;
-	margin-bottom: .25rem;
+	margin-bottom: .5rem;
 }
 
 .game-counter-btn {
@@ -133,6 +163,10 @@ h2 {
 
 /* Tablet Styles */
 @media (min-width: 910px) and (max-width: 1100px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
 	.img-wrapper img {
 		height: 13rem;
 		width: 16rem;

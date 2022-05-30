@@ -10,7 +10,7 @@ Collaborative project to build a Pokemon rock, paper, scissors game.
 
 **Tech used:** HTML, CSS, JavaScript, Node.js
 
-Learning was focused on building a simple, full-stack project collaboratively with a remote team. Developed with the goal of making the game logic performed server-side.
+Our learning was focused on building a simple, full-stack project collaboratively with a remote team. Developed with the goal of making the game logic performed server-side.
 
 ## Optimizations
 When this project is improved, we plan on refactoring our code using OOP principles.

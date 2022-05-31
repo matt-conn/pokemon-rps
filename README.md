@@ -7,13 +7,11 @@ Collaborative project to build a Pokemon rock, paper, scissors game.
 ![pokemon battle screenshot](images/pokemon-rps.gif)
 
 ## How It's Made:
-
 **Tech used:** HTML, CSS, JavaScript, Node.js
 
-Our learning was focused on building a simple, responsive, full-stack project collaboratively with a remote team. Developed with the goal of making the game logic performed server-side.
+Our learning was focused on building a simple, responsive, full-stack project collaboratively with a remote team. Developed with the goal of making the game logic performed server-side. In order to keep track of games won and games played, the local storage API was used. This allows for data persistence across multiple browser sessions.
 
 ## Optimizations
-In order to keep track of games won and games played, the local storage API was used. This allows for data persistence across multiple browser sessions.
 When this project is improved, we plan on refactoring our code using OOP principles.
 
 ## Lessons Learned:
